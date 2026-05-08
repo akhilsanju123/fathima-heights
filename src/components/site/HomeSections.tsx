@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import {
@@ -388,5 +389,3 @@ export function NewsSection() {
     </section>
   );
 }
-
-import { useState } from "react";
