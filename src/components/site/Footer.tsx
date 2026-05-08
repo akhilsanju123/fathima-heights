@@ -1,5 +1,15 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Youtube, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+
+const Facebook = (p: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...p}><path d="M13 22v-8h3l1-4h-4V7.5c0-1.2.4-2 2.1-2H17V2.2C16.7 2.1 15.6 2 14.4 2 11.9 2 10 3.5 10 6.7V10H7v4h3v8h3z"/></svg>
+);
+const Instagram = (p: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+);
+const Youtube = (p: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...p}><path d="M23 7.5c-.3-1.7-1.2-2.5-2.8-2.7C18 4.5 12 4.5 12 4.5s-6 0-8.2.3C2.2 5 1.3 5.8 1 7.5.7 9.3.7 12 .7 12s0 2.7.3 4.5c.3 1.7 1.2 2.5 2.8 2.7C6 19.5 12 19.5 12 19.5s6 0 8.2-.3c1.6-.2 2.5-1 2.8-2.7.3-1.8.3-4.5.3-4.5s0-2.7-.3-4.5zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
+);
 import logo from "@/assets/logo.webp";
 import { SCHOOL } from "@/lib/school";
 
