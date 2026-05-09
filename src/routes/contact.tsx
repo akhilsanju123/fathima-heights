@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import reception from "@/assets/reception.webp";
-import { SCHOOL } from "@/lib/school";
+import { SCHOOL, BRANCHES } from "@/lib/school";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
