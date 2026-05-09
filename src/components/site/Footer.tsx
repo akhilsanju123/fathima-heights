@@ -67,17 +67,20 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display text-lg mb-4 text-gradient-gold">Contact</h4>
-            <ul className="space-y-3 text-sm text-white/80">
-              <li className="flex gap-3"><MapPin className="size-4 mt-0.5 text-[color:var(--gold)] shrink-0" /><span>{SCHOOL.address}</span></li>
-              <li className="flex gap-3"><Phone className="size-4 mt-0.5 text-[color:var(--gold)] shrink-0" />
-                <span>
-                  <a href={`tel:${SCHOOL.phones[0]}`} className="hover:text-[color:var(--gold)]">{SCHOOL.phones[0]}</a>
-                  {" / "}
-                  <a href={`tel:${SCHOOL.phones[1]}`} className="hover:text-[color:var(--gold)]">{SCHOOL.phones[1]}</a>
-                </span>
-              </li>
-              <li className="flex gap-3"><Mail className="size-4 mt-0.5 text-[color:var(--gold)] shrink-0" /><a href={`mailto:${SCHOOL.email}`} className="hover:text-[color:var(--gold)]">{SCHOOL.email}</a></li>
+            <h4 className="font-display text-lg mb-4 text-gradient-gold">Our Campuses</h4>
+            <ul className="space-y-4 text-sm text-white/80">
+              {BRANCHES.map((b) => (
+                <li key={b.id}>
+                  <div className="font-semibold text-white">{b.name}</div>
+                  <div className="flex gap-2 mt-1"><MapPin className="size-4 mt-0.5 text-[color:var(--gold)] shrink-0" /><span>{b.address}</span></div>
+                  <div className="flex gap-2 mt-1 flex-wrap"><Phone className="size-4 mt-0.5 text-[color:var(--gold)] shrink-0" />
+                    <span>{b.phones.map((p, i) => (
+                      <span key={p}>{i > 0 && " · "}<a href={`tel:${p}`} className="hover:text-[color:var(--gold)]">{p}</a></span>
+                    ))}</span>
+                  </div>
+                </li>
+              ))}
+              <li className="flex gap-3 pt-2 border-t border-white/10"><Mail className="size-4 mt-0.5 text-[color:var(--gold)] shrink-0" /><a href={`mailto:${SCHOOL.email}`} className="hover:text-[color:var(--gold)]">{SCHOOL.email}</a></li>
             </ul>
           </div>
         </div>
