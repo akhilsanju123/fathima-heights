@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import reception from "@/assets/reception.webp";
-import { SCHOOL } from "@/lib/school";
+import { SCHOOL, BRANCHES } from "@/lib/school";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -31,8 +31,6 @@ function ContactPage() {
   };
 
   const cards = [
-    { icon: MapPin, title: "Visit", lines: [SCHOOL.address] },
-    { icon: Phone, title: "Call", lines: SCHOOL.phones, hrefPrefix: "tel:" },
     { icon: Mail, title: "Email", lines: [SCHOOL.email], hrefPrefix: "mailto:" },
     { icon: Clock, title: "Hours", lines: ["Mon – Sat: 8:30 AM – 4:30 PM", "Sunday: Closed"] },
   ];
@@ -43,7 +41,38 @@ function ContactPage() {
       <PageHero eyebrow="Contact Us" title={<>We'd love to <span className="text-gradient-gold">hear from you</span></>} description="Questions about admissions, programs or a campus visit — our team is here to help." image={reception} />
 
       <section className="py-16 px-4">
-        <div className="mx-auto max-w-7xl grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[color:var(--navy)] text-center">Our <span className="text-gradient-gold">Campuses</span></h2>
+          <p className="mt-2 text-center text-muted-foreground">Visit us at either of our two campuses across Hyderabad.</p>
+          <div className="mt-10 grid lg:grid-cols-2 gap-8">
+            {BRANCHES.map((b) => (
+              <div key={b.id} className="glass rounded-3xl p-6 shadow-glow flex flex-col">
+                <div className="flex items-start gap-3">
+                  <div className="size-12 grid place-items-center rounded-xl gradient-royal text-white shrink-0"><MapPin className="size-5" /></div>
+                  <div>
+                    <h3 className="font-display text-xl font-bold text-[color:var(--navy)]">{b.name}</h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{b.address}</p>
+                  </div>
+                </div>
+                <div className="mt-4 flex items-start gap-3">
+                  <div className="size-10 grid place-items-center rounded-lg bg-[color:var(--gold)]/15 text-[color:var(--royal)] shrink-0"><Phone className="size-4" /></div>
+                  <div className="flex flex-wrap gap-x-3 gap-y-1 text-sm">
+                    {b.phones.map((p) => (
+                      <a key={p} href={`tel:${p}`} className="font-medium text-[color:var(--navy)] hover:text-[color:var(--royal)]">{p}</a>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-5 rounded-2xl overflow-hidden border border-border min-h-[260px] flex-1">
+                  <iframe title={b.name} src={b.mapEmbed} className="w-full h-full min-h-[260px] border-0" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 px-4">
+        <div className="mx-auto max-w-7xl grid sm:grid-cols-2 gap-5">
           {cards.map((c) => (
             <div key={c.title} className="glass rounded-3xl p-6 shadow-glow">
               <div className="size-12 grid place-items-center rounded-xl gradient-royal text-white"><c.icon className="size-5" /></div>
@@ -60,16 +89,8 @@ function ContactPage() {
       </section>
 
       <section className="py-12 px-4">
-        <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-8">
-          <div className="rounded-3xl overflow-hidden shadow-glow border border-border min-h-[420px]">
-            <iframe
-              title="Holy Fathima High School location"
-              src={SCHOOL.mapEmbed}
-              className="w-full h-full min-h-[420px] border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+        <div className="mx-auto max-w-3xl">
+
           <form onSubmit={onSubmit} className="rounded-3xl bg-card border border-border p-8 shadow-glow">
             <h3 className="font-display text-2xl font-bold text-[color:var(--navy)]">Send a message</h3>
             <p className="text-sm text-muted-foreground mt-1">Fill in the form and our team will respond within one business day.</p>

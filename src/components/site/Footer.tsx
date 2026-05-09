@@ -11,7 +11,7 @@ const Youtube = (p: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...p}><path d="M23 7.5c-.3-1.7-1.2-2.5-2.8-2.7C18 4.5 12 4.5 12 4.5s-6 0-8.2.3C2.2 5 1.3 5.8 1 7.5.7 9.3.7 12 .7 12s0 2.7.3 4.5c.3 1.7 1.2 2.5 2.8 2.7C6 19.5 12 19.5 12 19.5s6 0 8.2-.3c1.6-.2 2.5-1 2.8-2.7.3-1.8.3-4.5.3-4.5s0-2.7-.3-4.5zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
 );
 import logo from "@/assets/logo.webp";
-import { SCHOOL } from "@/lib/school";
+import { SCHOOL, BRANCHES } from "@/lib/school";
 
 export function Footer() {
   return (
@@ -67,17 +67,20 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display text-lg mb-4 text-gradient-gold">Contact</h4>
-            <ul className="space-y-3 text-sm text-white/80">
-              <li className="flex gap-3"><MapPin className="size-4 mt-0.5 text-[color:var(--gold)] shrink-0" /><span>{SCHOOL.address}</span></li>
-              <li className="flex gap-3"><Phone className="size-4 mt-0.5 text-[color:var(--gold)] shrink-0" />
-                <span>
-                  <a href={`tel:${SCHOOL.phones[0]}`} className="hover:text-[color:var(--gold)]">{SCHOOL.phones[0]}</a>
-                  {" / "}
-                  <a href={`tel:${SCHOOL.phones[1]}`} className="hover:text-[color:var(--gold)]">{SCHOOL.phones[1]}</a>
-                </span>
-              </li>
-              <li className="flex gap-3"><Mail className="size-4 mt-0.5 text-[color:var(--gold)] shrink-0" /><a href={`mailto:${SCHOOL.email}`} className="hover:text-[color:var(--gold)]">{SCHOOL.email}</a></li>
+            <h4 className="font-display text-lg mb-4 text-gradient-gold">Our Campuses</h4>
+            <ul className="space-y-4 text-sm text-white/80">
+              {BRANCHES.map((b) => (
+                <li key={b.id}>
+                  <div className="font-semibold text-white">{b.name}</div>
+                  <div className="flex gap-2 mt-1"><MapPin className="size-4 mt-0.5 text-[color:var(--gold)] shrink-0" /><span>{b.address}</span></div>
+                  <div className="flex gap-2 mt-1 flex-wrap"><Phone className="size-4 mt-0.5 text-[color:var(--gold)] shrink-0" />
+                    <span>{b.phones.map((p, i) => (
+                      <span key={p}>{i > 0 && " · "}<a href={`tel:${p}`} className="hover:text-[color:var(--gold)]">{p}</a></span>
+                    ))}</span>
+                  </div>
+                </li>
+              ))}
+              <li className="flex gap-3 pt-2 border-t border-white/10"><Mail className="size-4 mt-0.5 text-[color:var(--gold)] shrink-0" /><a href={`mailto:${SCHOOL.email}`} className="hover:text-[color:var(--gold)]">{SCHOOL.email}</a></li>
             </ul>
           </div>
         </div>
