@@ -11,7 +11,7 @@ const Youtube = (p: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...p}><path d="M23 7.5c-.3-1.7-1.2-2.5-2.8-2.7C18 4.5 12 4.5 12 4.5s-6 0-8.2.3C2.2 5 1.3 5.8 1 7.5.7 9.3.7 12 .7 12s0 2.7.3 4.5c.3 1.7 1.2 2.5 2.8 2.7C6 19.5 12 19.5 12 19.5s6 0 8.2-.3c1.6-.2 2.5-1 2.8-2.7.3-1.8.3-4.5.3-4.5s0-2.7-.3-4.5zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
 );
 import logo from "@/assets/logo.webp";
-import { SCHOOL } from "@/lib/school";
+import { SCHOOL, BRANCHES } from "@/lib/school";
 
 export function Footer() {
   return (
