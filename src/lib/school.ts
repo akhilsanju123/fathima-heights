@@ -33,13 +33,4 @@ export const BRANCHES: Branch[] = [
     mapEmbed:
       "https://www.google.com/maps?q=New+Hafeezpet,+Marthanda+Nagar,+Hafeezpet,+Hyderabad,+Telangana+500049&output=embed",
   },
-  {
-    id: "kollur",
-    name: "Branch Campus — Kollur",
-    address:
-      "H.No 6-36, Indrareddy Nagar, Phase-1, Near KCR Nagar, Kollur, Janwada, Mirzaguda, Shankarpally, Rangareddy Dist - 500075",
-    phones: ["7416315599", "7416715599", "7416877599"],
-    mapEmbed:
-      "https://www.google.com/maps?q=Indrareddy+Nagar+Phase+1+Kollur+Janwada+Shankarpally+Rangareddy+500075&output=embed",
-  },
 ];

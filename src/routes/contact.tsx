@@ -43,7 +43,7 @@ function ContactPage() {
       <section className="py-16 px-4">
         <div className="mx-auto max-w-7xl">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-[color:var(--navy)] text-center">Our <span className="text-gradient-gold">Campuses</span></h2>
-          <p className="mt-2 text-center text-muted-foreground">Visit us at either of our two campuses across Hyderabad.</p>
+          <p className="mt-2 text-center text-muted-foreground">Visit us at our campus in Hafeezpet, Hyderabad.</p>
           <div className="mt-10 grid lg:grid-cols-2 gap-8">
             {BRANCHES.map((b) => (
               <div key={b.id} className="glass rounded-3xl p-6 shadow-glow flex flex-col">
