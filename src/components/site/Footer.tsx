@@ -30,7 +30,7 @@ export function Footer() {
             </div>
             <p className="mt-4 text-sm text-white/75 leading-relaxed">
               Building bright futures since {SCHOOL.established}. English-medium education
-              from Nursery through +2 in the heart of Hafeezpet, Hyderabad.
+              from Nursery through Class 10 in the heart of Hafeezpet, Hyderabad.
             </p>
             <div className="mt-5 flex gap-3">
               {[Facebook, Instagram, Youtube].map((Icon, i) => (
