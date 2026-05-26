@@ -65,8 +65,8 @@ export function AboutSection() {
           />
           <ul className="mt-6 space-y-3">
             {[
-              "English-medium education from Nursery through +2",
-              "CBSE-aligned curriculum with experienced faculty",
+              "English-medium education from Nursery through Class 10",
+              "CBSE for Nursery–5th and SSC for 6th–10th with experienced faculty",
               "Smart classrooms, science lab, computer lab and library",
               "Safe campus with CCTV, transport and dedicated care",
             ].map((t) => (
