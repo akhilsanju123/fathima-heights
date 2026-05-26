@@ -93,7 +93,7 @@ function AdmissionsPage() {
                 <Field label="Parent name" name="parent" required />
                 <Field label="Phone number" name="phone" type="tel" required />
                 <Field label="Email" name="email" type="email" />
-                <SelectField label="Class applying for" name="class" options={["Nursery", "Preschool", "LKG", "UKG", "Class 1-5", "Class 6-10", "+2 / Intermediate"]} required />
+                <SelectField label="Class applying for" name="class" options={["Nursery", "Preschool", "LKG", "UKG", "Class 1-5 (CBSE)", "Class 6-10 (SSC)", "Abacus (1-5)", "IIT Foundation (5-10)"]} required />
                 <Field label="City" name="city" defaultValue="Hyderabad" />
                 <div className="sm:col-span-2">
                   <label className="block text-xs uppercase tracking-widest text-white/70 mb-1.5">Message (optional)</label>
