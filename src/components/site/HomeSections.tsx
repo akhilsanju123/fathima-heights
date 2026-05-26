@@ -98,9 +98,9 @@ const programs = [
   { icon: Sparkles, title: "Nursery", desc: "Joyful first steps into learning for ages 2.5–3.5 with play-based activities." },
   { icon: HeartHandshake, title: "Preschool", desc: "Fostering curiosity, social skills and pre-literacy through guided exploration." },
   { icon: Lightbulb, title: "Kindergarten", desc: "LKG & UKG building literacy, numeracy and confidence with experienced teachers." },
-  { icon: BookOpen, title: "Primary (1–5)", desc: "A strong English-medium foundation in language, math, science and life skills." },
-  { icon: GraduationCap, title: "Secondary (6–10)", desc: "Concept-driven learning aligned with the high-school board for academic excellence." },
-  { icon: Award, title: "+2 / Intermediate", desc: "Streams that prepare students for higher studies and competitive examinations." },
+  { icon: BookOpen, title: "Primary 1–5 (CBSE)", desc: "A strong English-medium CBSE foundation in language, math, science and life skills." },
+  { icon: GraduationCap, title: "High School 6–10 (SSC)", desc: "SSC board curriculum with concept-driven learning for academic excellence." },
+  { icon: Award, title: "Abacus & IIT Foundation", desc: "Abacus for Classes 1–5 and IIT Foundation for Classes 5–10 to build a competitive edge." },
 ];
 
 export function ProgramsSection() {
@@ -109,8 +109,8 @@ export function ProgramsSection() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Academic Programs"
-          title={<>A complete journey from <span className="text-gradient-gold">Nursery to +2</span></>}
-          description="Carefully crafted programs at every stage, designed to nurture curious minds and confident young adults."
+          title={<>A complete journey from <span className="text-gradient-gold">Nursery to Class 10</span></>}
+          description="CBSE primary, SSC high school, plus Abacus and IIT Foundation enrichment — designed for curious minds and confident learners."
         />
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {programs.map((p, i) => (
