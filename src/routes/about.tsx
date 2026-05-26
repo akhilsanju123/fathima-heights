@@ -35,7 +35,7 @@ function AboutPage() {
             <p className="mt-6 text-muted-foreground leading-relaxed">
               Founded in <strong className="text-foreground">{SCHOOL.established}</strong>, Holy Fathima High School began with a simple
               promise — to make high-quality English-medium education accessible to families in Hafeezpet and beyond. Two decades on,
-              we have grown into a vibrant institution with students from Nursery through +2.
+              we have grown into a vibrant institution with students from Nursery through Class 10.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Our approach blends academic rigour with values, sports, the arts and modern teaching methods. Every classroom is a
