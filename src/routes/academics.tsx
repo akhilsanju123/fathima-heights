@@ -29,7 +29,7 @@ const programs = [
 function AcademicsPage() {
   return (
     <>
-      <PageHero eyebrow="Academics" title={<>A complete journey from <span className="text-gradient-gold">Nursery to +2</span></>} description="Carefully crafted programs at every stage, designed to nurture curious minds, strong values and confident young adults." image={classroom2} />
+      <PageHero eyebrow="Academics" title={<>A complete journey from <span className="text-gradient-gold">Nursery to Class 10</span></>} description="CBSE primary (Nursery – 5th), SSC high school (6th – 10th), with Abacus for 1st–5th and IIT Foundation for 5th–10th — designed to nurture curious minds and confident learners." image={classroom2} />
 
       <section className="py-20 px-4">
         <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-6">
