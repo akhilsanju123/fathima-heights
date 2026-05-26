@@ -22,7 +22,7 @@ export function AnnouncementTicker() {
   const items = [
     "Admissions open for academic year 2026-27",
     "Annual Sports Day celebrated with great enthusiasm",
-    "Congratulations to our +2 toppers!",
+    "Congratulations to our Class 10 toppers!",
     "New Smart Classrooms now live across all sections",
     "Parent-Teacher meeting scheduled for next Saturday",
   ];
