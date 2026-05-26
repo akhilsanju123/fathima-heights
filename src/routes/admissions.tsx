@@ -37,7 +37,7 @@ const docs = [
 ];
 
 const faqs = [
-  { q: "What is the medium of instruction?", a: "Holy Fathima High School is an English-medium institution from Nursery through +2." },
+  { q: "What is the medium of instruction?", a: "Holy Fathima High School is an English-medium institution from Nursery through Class 10 — CBSE for Nursery–5th and SSC for 6th–10th." },
   { q: "What is the age criterion for Nursery?", a: "Children should be between 2.5 and 3.5 years old as on 1st June of the academic year." },
   { q: "Do you provide transport?", a: "Yes, we operate a safe school transport service with trained drivers and dedicated attendants." },
   { q: "How can I schedule a campus visit?", a: "Submit the inquiry form below or call us at " + SCHOOL.phones[0] + " to schedule a visit at your convenience." },
