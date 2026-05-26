@@ -13,7 +13,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us — Holy Fathima High School, Hafeez Pet" },
-      { name: "description", content: "Established in 2003, Holy Fathima High School is a trusted English-medium school in Hafeezpet, Hyderabad offering Nursery to +2 education." },
+      { name: "description", content: "Established in 2003, Holy Fathima High School is a trusted English-medium school in Hafeezpet, Hyderabad offering Nursery to Class 10 — CBSE primary and SSC high school." },
       { property: "og:title", content: "About Holy Fathima High School" },
       { property: "og:description", content: "A 20+ year legacy of academic excellence and character building in Hafeezpet, Hyderabad." },
       { property: "og:image", content: campus },
