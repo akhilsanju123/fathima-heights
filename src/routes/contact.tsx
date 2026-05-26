@@ -11,7 +11,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Us — Holy Fathima High School, Hafeez Pet" },
-      { name: "description", content: "Get in touch with Holy Fathima High School. Address: 4-1061/84, New Hafeezpet, Hyderabad. Phone: 9133531525 / 9603588716." },
+      { name: "description", content: "Get in touch with Holy Fathima High School. Address: 4-1061/84, New Hafeezpet, Hyderabad. Phone: 9391668092 / 8121731765 / 9391837245." },
       { property: "og:title", content: "Contact Holy Fathima High School" },
       { property: "og:description", content: "Reach our admissions team in Hafeezpet, Hyderabad — call, email or visit our campus." },
     ],
