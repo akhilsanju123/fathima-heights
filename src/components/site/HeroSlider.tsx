@@ -12,7 +12,7 @@ const slides = [
     image: campus,
     eyebrow: "Welcome to Holy Fathima High School",
     title: "Building Bright Futures\nSince 2003",
-    subtitle: "Premium English-medium education from Nursery to +2 in the heart of Hafeezpet, Hyderabad.",
+    subtitle: "Premium English-medium education from Nursery to Class 10 — CBSE primary and SSC high school in the heart of Hafeezpet, Hyderabad.",
   },
   {
     image: classroom1,

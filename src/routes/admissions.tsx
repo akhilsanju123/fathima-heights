@@ -13,7 +13,7 @@ export const Route = createFileRoute("/admissions")({
   head: () => ({
     meta: [
       { title: "Admissions Open 2026–27 — Holy Fathima High School, Hafeez Pet" },
-      { name: "description", content: "Admissions open at Holy Fathima High School, Hafeezpet. Apply for Nursery, Preschool, Kindergarten, Primary, Secondary or +2." },
+      { name: "description", content: "Admissions open at Holy Fathima High School, Hafeezpet. Apply for Nursery, Preschool, Kindergarten, CBSE Primary (1–5) or SSC High School (6–10)." },
       { property: "og:title", content: "Admissions — Holy Fathima High School" },
       { property: "og:description", content: "Secure your child's seat for the upcoming academic year. Limited seats across all classes." },
     ],
@@ -37,7 +37,7 @@ const docs = [
 ];
 
 const faqs = [
-  { q: "What is the medium of instruction?", a: "Holy Fathima High School is an English-medium institution from Nursery through +2." },
+  { q: "What is the medium of instruction?", a: "Holy Fathima High School is an English-medium institution from Nursery through Class 10 — CBSE for Nursery–5th and SSC for 6th–10th." },
   { q: "What is the age criterion for Nursery?", a: "Children should be between 2.5 and 3.5 years old as on 1st June of the academic year." },
   { q: "Do you provide transport?", a: "Yes, we operate a safe school transport service with trained drivers and dedicated attendants." },
   { q: "How can I schedule a campus visit?", a: "Submit the inquiry form below or call us at " + SCHOOL.phones[0] + " to schedule a visit at your convenience." },
@@ -93,7 +93,7 @@ function AdmissionsPage() {
                 <Field label="Parent name" name="parent" required />
                 <Field label="Phone number" name="phone" type="tel" required />
                 <Field label="Email" name="email" type="email" />
-                <SelectField label="Class applying for" name="class" options={["Nursery", "Preschool", "LKG", "UKG", "Class 1-5", "Class 6-10", "+2 / Intermediate"]} required />
+                <SelectField label="Class applying for" name="class" options={["Nursery", "Preschool", "LKG", "UKG", "Class 1-5 (CBSE)", "Class 6-10 (SSC)", "Abacus (1-5)", "IIT Foundation (5-10)"]} required />
                 <Field label="City" name="city" defaultValue="Hyderabad" />
                 <div className="sm:col-span-2">
                   <label className="block text-xs uppercase tracking-widest text-white/70 mb-1.5">Message (optional)</label>

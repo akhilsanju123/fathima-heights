@@ -8,9 +8,9 @@ export const SCHOOL = {
   medium: "English",
   address:
     "4-1061/84, New Hafeezpet, Marthanda Nagar, Hafeezpet, Hyderabad, Telangana 500049",
-  phones: ["9133531525", "9603588716"],
+  phones: ["9391668092", "8121731765", "9391837245"],
   email: "info@holyfathimaschool.edu.in",
-  whatsapp: "919133531525",
+  whatsapp: "919391668092",
   mapEmbed:
     "https://www.google.com/maps?q=New+Hafeezpet,+Marthanda+Nagar,+Hafeezpet,+Hyderabad,+Telangana+500049&output=embed",
 };
@@ -29,7 +29,7 @@ export const BRANCHES: Branch[] = [
     name: "Main Campus — Hafeez Pet",
     address:
       "4-1061/84, New Hafeezpet, Marthanda Nagar, Hafeezpet, Hyderabad, Telangana 500049",
-    phones: ["9133531525", "9603588716"],
+    phones: ["9391668092", "8121731765", "9391837245"],
     mapEmbed:
       "https://www.google.com/maps?q=New+Hafeezpet,+Marthanda+Nagar,+Hafeezpet,+Hyderabad,+Telangana+500049&output=embed",
   },

@@ -8,10 +8,10 @@ import classroom2 from "@/assets/classroom-2.webp";
 export const Route = createFileRoute("/academics")({
   head: () => ({
     meta: [
-      { title: "Academics — Programs from Nursery to +2 | Holy Fathima High School" },
-      { name: "description", content: "Explore our English-medium academic programs from Nursery, Preschool, Kindergarten, Primary, Secondary to +2 at Holy Fathima High School, Hafeezpet." },
+      { title: "Academics — Programs from Nursery to 10th | Holy Fathima High School" },
+      { name: "description", content: "Explore our English-medium academic programs at Holy Fathima High School, Hafeezpet — Nursery to 5th (CBSE), 6th to 10th (SSC), Abacus for 1st–5th and IIT Foundation for 5th–10th." },
       { property: "og:title", content: "Academic Programs — Holy Fathima High School" },
-      { property: "og:description", content: "A complete educational journey from early years through +2 with experienced faculty and modern teaching methods." },
+      { property: "og:description", content: "A complete educational journey from Nursery to Class 10 with CBSE primary, SSC high school, plus Abacus and IIT Foundation programs." },
     ],
   }),
   component: AcademicsPage,
@@ -21,15 +21,15 @@ const programs = [
   { icon: Sparkles, title: "Nursery", age: "Ages 2.5 – 3.5", points: ["Play-based exploration", "Sensory & motor activities", "Storytime, rhymes & music", "Gentle social skills development"] },
   { icon: HeartHandshake, title: "Preschool", age: "Ages 3.5 – 4.5", points: ["Pre-literacy and pre-numeracy", "Group projects & circle time", "Art, craft and movement", "Confidence and routine building"] },
   { icon: Lightbulb, title: "Kindergarten (LKG & UKG)", age: "Ages 4.5 – 6", points: ["Phonics and early reading", "Numeracy and basic math", "Themed learning units", "School-readiness in English"] },
-  { icon: BookOpen, title: "Primary (Classes 1 – 5)", age: "Foundation Stage", points: ["Strong English-medium foundation", "Math, EVS, Computers, Art", "Library and reading culture", "Activity-based assessments"] },
-  { icon: GraduationCap, title: "Secondary (Classes 6 – 10)", age: "Middle & High School", points: ["Concept-based learning", "Science, Math, Social, Languages", "Lab work and project-based units", "Board exam preparation"] },
-  { icon: Award, title: "+2 / Intermediate", age: "Pre-University", points: ["Streams aligned with higher studies", "Competitive exam guidance", "Career counselling", "Soft-skills and communication"] },
+  { icon: BookOpen, title: "Primary (Classes 1 – 5) — CBSE", age: "Foundation Stage", points: ["CBSE-aligned curriculum", "Strong English-medium foundation", "Math, EVS, Computers, Art", "Activity-based assessments"] },
+  { icon: GraduationCap, title: "High School (Classes 6 – 10) — SSC", age: "Middle & High School", points: ["SSC board curriculum", "Concept-based learning", "Science, Math, Social, Languages", "Board exam preparation"] },
+  { icon: Award, title: "Enrichment — Abacus & IIT Foundation", age: "Skill Programs", points: ["Abacus for Classes 1 – 5", "IIT Foundation for Classes 5 – 10", "Mental math & logical reasoning", "Competitive exam readiness"] },
 ];
 
 function AcademicsPage() {
   return (
     <>
-      <PageHero eyebrow="Academics" title={<>A complete journey from <span className="text-gradient-gold">Nursery to +2</span></>} description="Carefully crafted programs at every stage, designed to nurture curious minds, strong values and confident young adults." image={classroom2} />
+      <PageHero eyebrow="Academics" title={<>A complete journey from <span className="text-gradient-gold">Nursery to Class 10</span></>} description="CBSE primary (Nursery – 5th), SSC high school (6th – 10th), with Abacus for 1st–5th and IIT Foundation for 5th–10th — designed to nurture curious minds and confident learners." image={classroom2} />
 
       <section className="py-20 px-4">
         <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-6">

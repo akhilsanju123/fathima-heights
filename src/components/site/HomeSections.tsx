@@ -22,7 +22,7 @@ export function AnnouncementTicker() {
   const items = [
     "Admissions open for academic year 2026-27",
     "Annual Sports Day celebrated with great enthusiasm",
-    "Congratulations to our +2 toppers!",
+    "Congratulations to our Class 10 toppers!",
     "New Smart Classrooms now live across all sections",
     "Parent-Teacher meeting scheduled for next Saturday",
   ];
@@ -65,8 +65,8 @@ export function AboutSection() {
           />
           <ul className="mt-6 space-y-3">
             {[
-              "English-medium education from Nursery through +2",
-              "CBSE-aligned curriculum with experienced faculty",
+              "English-medium education from Nursery through Class 10",
+              "CBSE for Nursery–5th and SSC for 6th–10th with experienced faculty",
               "Smart classrooms, science lab, computer lab and library",
               "Safe campus with CCTV, transport and dedicated care",
             ].map((t) => (
@@ -98,9 +98,9 @@ const programs = [
   { icon: Sparkles, title: "Nursery", desc: "Joyful first steps into learning for ages 2.5–3.5 with play-based activities." },
   { icon: HeartHandshake, title: "Preschool", desc: "Fostering curiosity, social skills and pre-literacy through guided exploration." },
   { icon: Lightbulb, title: "Kindergarten", desc: "LKG & UKG building literacy, numeracy and confidence with experienced teachers." },
-  { icon: BookOpen, title: "Primary (1–5)", desc: "A strong English-medium foundation in language, math, science and life skills." },
-  { icon: GraduationCap, title: "Secondary (6–10)", desc: "Concept-driven learning aligned with the high-school board for academic excellence." },
-  { icon: Award, title: "+2 / Intermediate", desc: "Streams that prepare students for higher studies and competitive examinations." },
+  { icon: BookOpen, title: "Primary 1–5 (CBSE)", desc: "A strong English-medium CBSE foundation in language, math, science and life skills." },
+  { icon: GraduationCap, title: "High School 6–10 (SSC)", desc: "SSC board curriculum with concept-driven learning for academic excellence." },
+  { icon: Award, title: "Abacus & IIT Foundation", desc: "Abacus for Classes 1–5 and IIT Foundation for Classes 5–10 to build a competitive edge." },
 ];
 
 export function ProgramsSection() {
@@ -109,8 +109,8 @@ export function ProgramsSection() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Academic Programs"
-          title={<>A complete journey from <span className="text-gradient-gold">Nursery to +2</span></>}
-          description="Carefully crafted programs at every stage, designed to nurture curious minds and confident young adults."
+          title={<>A complete journey from <span className="text-gradient-gold">Nursery to Class 10</span></>}
+          description="CBSE primary, SSC high school, plus Abacus and IIT Foundation enrichment — designed for curious minds and confident learners."
         />
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {programs.map((p, i) => (
@@ -278,7 +278,7 @@ export function GalleryPreview() {
 const testimonials = [
   { name: "Mrs. Anjali Reddy", role: "Parent of Class 5", quote: "The teachers genuinely care about each child. My daughter has grown so confident since joining Holy Fathima.", img: classroom2 },
   { name: "Mr. Imran Khan", role: "Parent of Class 9", quote: "Excellent academics combined with strong values. The campus is safe and the staff is always approachable.", img: classroom1 },
-  { name: "Sneha S.", role: "Alumna, +2", quote: "Holy Fathima shaped who I am today. The faculty pushed me to dream big and gave me the tools to get there.", img: classroom3 },
+  { name: "Sneha S.", role: "Alumna, Class 10", quote: "Holy Fathima shaped who I am today. The faculty pushed me to dream big and gave me the tools to get there.", img: classroom3 },
   { name: "Mr. Ramesh Naidu", role: "Parent of UKG", quote: "Best decision we made. The play-based learning has my son excited to go to school every single day.", img: classroom4 },
 ];
 
