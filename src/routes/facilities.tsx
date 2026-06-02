@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { PageHero } from "@/components/site/PageHero";
 import { MonitorSmartphone, Laptop, FlaskConical, Library, Volleyball, Video, Bus, Lightbulb, ShieldCheck, BookOpen } from "lucide-react";
-import campus from "@/assets/campus.jpg";
+import campusData from "@/assets/marthanda-nagar.jpg.asset.json";
+const campus = campusData.url;
 
 export const Route = createFileRoute("/facilities")({
   head: () => ({

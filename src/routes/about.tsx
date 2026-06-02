@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Counter } from "@/components/site/Counter";
-import campus from "@/assets/campus.jpg";
+import campusData from "@/assets/marthanda-nagar.jpg.asset.json";
+const campus = campusData.url;
 import classroom1 from "@/assets/classroom-1.webp";
 import office from "@/assets/office.webp";
 import { SCHOOL } from "@/lib/school";
@@ -13,7 +14,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us — Holy Fathima High School, Hafeez Pet" },
-      { name: "description", content: "Established in 2003, Holy Fathima High School is a trusted English-medium school in Hafeezpet, Hyderabad offering Nursery to Class 10 — CBSE primary and SSC high school." },
+      { name: "description", content: "Established in 1989, Holy Fathima High School is a trusted English-medium school in Hafeezpet, Hyderabad offering Nursery to Class 10 — CBSE primary and SSC high school." },
       { property: "og:title", content: "About Holy Fathima High School" },
       { property: "og:description", content: "A 20+ year legacy of academic excellence and character building in Hafeezpet, Hyderabad." },
       { property: "og:image", content: campus },
@@ -25,7 +26,7 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <>
-      <PageHero eyebrow="About Our School" title={<>Two decades of <span className="text-gradient-gold">excellence</span></>} description="A trusted name in English-medium education at Hafeezpet, Hyderabad — building character, confidence and competence since 2003." image={campus} />
+      <PageHero eyebrow="About Our School" title={<>Two decades of <span className="text-gradient-gold">excellence</span></>} description="A trusted name in English-medium education at Hafeezpet, Hyderabad — building character, confidence and competence since 1989." image={campus} />
 
       <section className="py-20 px-4">
         <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center">
@@ -78,7 +79,7 @@ function AboutPage() {
           <div className="mt-12 relative">
             <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[color:var(--gold)] via-[color:var(--royal)] to-transparent -translate-x-1/2" />
             {[
-              { y: "2003", t: "Founded", d: "Holy Fathima High School opens its doors in Hafeezpet with the founding batch." },
+              { y: "1989", t: "Founded", d: "Holy Fathima High School opens its doors in Hafeezpet with the founding batch." },
               { y: "2008", t: "Primary Wing Expansion", d: "Strong demand leads to a fully expanded primary section." },
               { y: "2014", t: "Secondary Section", d: "Welcomed our first Class 10 batch to outstanding results." },
               { y: "2019", t: "Smart Classrooms", d: "Digital boards installed across every classroom." },

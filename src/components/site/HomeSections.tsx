@@ -9,7 +9,8 @@ import {
 import { SectionHeading } from "./SectionHeading";
 import { Counter } from "./Counter";
 import { SCHOOL } from "@/lib/school";
-import campus from "@/assets/campus.jpg";
+import campusData from "@/assets/marthanda-nagar.jpg.asset.json";
+const campus = campusData.url;
 import classroom1 from "@/assets/classroom-1.webp";
 import classroom2 from "@/assets/classroom-2.webp";
 import classroom3 from "@/assets/classroom-3.webp";
