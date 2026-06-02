@@ -33,12 +33,9 @@ export function Footer() {
               from Nursery through Class 10 in the heart of Hafeezpet, Hyderabad.
             </p>
             <div className="mt-5 flex gap-3">
-              {[Facebook, Instagram, Youtube].map((Icon, i) => (
-                <a key={i} href="#" aria-label="social"
-                  className="size-9 grid place-items-center rounded-full bg-white/10 hover:bg-[color:var(--gold)] hover:text-[color:var(--navy)] transition">
-                  <Icon className="size-4" />
-                </a>
-              ))}
+              <a href={SCHOOL.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="size-9 grid place-items-center rounded-full bg-white/10 hover:bg-[color:var(--gold)] hover:text-[color:var(--navy)] transition"><Facebook className="size-4" /></a>
+              <a href={SCHOOL.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="size-9 grid place-items-center rounded-full bg-white/10 hover:bg-[color:var(--gold)] hover:text-[color:var(--navy)] transition"><Instagram className="size-4" /></a>
+              <a href="#" aria-label="YouTube" className="size-9 grid place-items-center rounded-full bg-white/10 hover:bg-[color:var(--gold)] hover:text-[color:var(--navy)] transition"><Youtube className="size-4" /></a>
             </div>
           </div>
 
@@ -49,6 +46,7 @@ export function Footer() {
                 ["/about", "About Us"],
                 ["/academics", "Academics"],
                 ["/facilities", "Facilities"],
+                ["/branches", "Branches"],
                 ["/gallery", "Gallery"],
               ].map(([to, label]) => (
                 <li key={to}><Link to={to} className="hover:text-[color:var(--gold)] transition">{label}</Link></li>

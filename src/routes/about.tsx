@@ -3,9 +3,12 @@ import { motion } from "framer-motion";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Counter } from "@/components/site/Counter";
-import campus from "@/assets/campus.jpg";
+import campusData from "@/assets/marthanda-nagar.jpg.asset.json";
+const campus = campusData.url;
 import classroom1 from "@/assets/classroom-1.webp";
 import office from "@/assets/office.webp";
+import chairmanData from "@/assets/chairman.jpg.asset.json";
+const chairman = chairmanData.url;
 import { SCHOOL } from "@/lib/school";
 import { Eye, Target, HeartHandshake } from "lucide-react";
 
@@ -13,7 +16,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us — Holy Fathima High School, Hafeez Pet" },
-      { name: "description", content: "Established in 2003, Holy Fathima High School is a trusted English-medium school in Hafeezpet, Hyderabad offering Nursery to Class 10 — CBSE primary and SSC high school." },
+      { name: "description", content: "Established in 1989, Holy Fathima High School is a trusted English-medium school in Hafeezpet, Hyderabad offering Nursery to Class 10 — CBSE primary and SSC high school." },
       { property: "og:title", content: "About Holy Fathima High School" },
       { property: "og:description", content: "A 20+ year legacy of academic excellence and character building in Hafeezpet, Hyderabad." },
       { property: "og:image", content: campus },
@@ -25,7 +28,7 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <>
-      <PageHero eyebrow="About Our School" title={<>Two decades of <span className="text-gradient-gold">excellence</span></>} description="A trusted name in English-medium education at Hafeezpet, Hyderabad — building character, confidence and competence since 2003." image={campus} />
+      <PageHero eyebrow="About Our School" title={<>Two decades of <span className="text-gradient-gold">excellence</span></>} description="A trusted name in English-medium education at Hafeezpet, Hyderabad — building character, confidence and competence since 1989." image={campus} />
 
       <section className="py-20 px-4">
         <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center">
@@ -72,13 +75,56 @@ function AboutPage() {
         </div>
       </section>
 
+      <section className="py-20 px-4 bg-card/30">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading eyebrow="Leadership" title={<>Chairman's <span className="text-gradient-gold">Message</span></>} />
+          <div className="mt-12 grid lg:grid-cols-[380px_1fr] gap-10 items-start">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative">
+              <div className="absolute -inset-3 gradient-gold rounded-3xl opacity-25 blur-xl" />
+              <img src={chairman} alt="Chairman of Holy Fathima Group of Schools" className="relative rounded-3xl shadow-glow w-full h-[460px] object-cover object-top" />
+              <div className="mt-4 text-center">
+                <div className="font-display text-xl font-bold text-[color:var(--navy)]">Chairman &amp; Founder</div>
+                <div className="text-sm text-muted-foreground">Group of Holy Fathima High Schools</div>
+                <div className="text-xs text-muted-foreground mt-1">Principal — Marthanda Nagar Branch</div>
+              </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="glass rounded-3xl p-7 sm:p-9 shadow-glow">
+              <p className="text-muted-foreground leading-relaxed">
+                Respected parents, dear students, and esteemed well-wishers, it gives me immense pride and joy to welcome you to
+                an institution that stands as a symbol of excellence, values, and holistic education. At Holy Fathima, we believe
+                that education is not merely about acquiring knowledge from books, but about shaping character, instilling discipline,
+                and nurturing confidence in every child. Our mission is to create responsible, compassionate, and capable individuals
+                who can contribute meaningfully to society.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                With a strong academic foundation, we integrate modern teaching methodologies, digital learning, and activity-based
+                education to make learning both effective and enjoyable. Our team of highly qualified and dedicated educators works
+                tirelessly to guide each student towards academic success and personal growth. We place equal emphasis on
+                co-curricular and extracurricular activities, ensuring that our students develop leadership qualities, creativity,
+                teamwork, and physical well-being. From sports and arts to public speaking and community service, we encourage
+                every child to explore their talents and discover their true potential.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                Our campuses are designed to provide a safe, secure, and inspiring environment, equipped with modern infrastructure
+                and student-friendly facilities. We also believe in maintaining a strong partnership with parents, as together we can
+                shape a brighter future for our children. I warmly invite you to visit our Marthanda Nagar campus, interact with our
+                faculty, and witness the quality education and values we proudly uphold.
+              </p>
+              <p className="mt-4 font-display text-lg text-[color:var(--navy)] italic">
+                "Give your child the right platform to learn, grow, and succeed. At Holy Fathima, we don't just educate minds — we shape futures."
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 px-4">
         <div className="mx-auto max-w-5xl">
           <SectionHeading eyebrow="Our Journey" title={<>Milestones along the <span className="text-gradient-gold">way</span></>} />
           <div className="mt-12 relative">
             <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[color:var(--gold)] via-[color:var(--royal)] to-transparent -translate-x-1/2" />
             {[
-              { y: "2003", t: "Founded", d: "Holy Fathima High School opens its doors in Hafeezpet with the founding batch." },
+              { y: "1989", t: "Founded", d: "Holy Fathima High School opens its doors in Hafeezpet with the founding batch." },
               { y: "2008", t: "Primary Wing Expansion", d: "Strong demand leads to a fully expanded primary section." },
               { y: "2014", t: "Secondary Section", d: "Welcomed our first Class 10 batch to outstanding results." },
               { y: "2019", t: "Smart Classrooms", d: "Digital boards installed across every classroom." },
