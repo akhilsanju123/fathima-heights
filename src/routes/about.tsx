@@ -75,6 +75,49 @@ function AboutPage() {
         </div>
       </section>
 
+      <section className="py-20 px-4 bg-card/30">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading eyebrow="Leadership" title={<>Chairman's <span className="text-gradient-gold">Message</span></>} />
+          <div className="mt-12 grid lg:grid-cols-[380px_1fr] gap-10 items-start">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative">
+              <div className="absolute -inset-3 gradient-gold rounded-3xl opacity-25 blur-xl" />
+              <img src={chairman} alt="Chairman of Holy Fathima Group of Schools" className="relative rounded-3xl shadow-glow w-full h-[460px] object-cover object-top" />
+              <div className="mt-4 text-center">
+                <div className="font-display text-xl font-bold text-[color:var(--navy)]">Chairman &amp; Founder</div>
+                <div className="text-sm text-muted-foreground">Group of Holy Fathima High Schools</div>
+                <div className="text-xs text-muted-foreground mt-1">Principal — Marthanda Nagar Branch</div>
+              </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="glass rounded-3xl p-7 sm:p-9 shadow-glow">
+              <p className="text-muted-foreground leading-relaxed">
+                Respected parents, dear students, and esteemed well-wishers, it gives me immense pride and joy to welcome you to
+                an institution that stands as a symbol of excellence, values, and holistic education. At Holy Fathima, we believe
+                that education is not merely about acquiring knowledge from books, but about shaping character, instilling discipline,
+                and nurturing confidence in every child. Our mission is to create responsible, compassionate, and capable individuals
+                who can contribute meaningfully to society.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                With a strong academic foundation, we integrate modern teaching methodologies, digital learning, and activity-based
+                education to make learning both effective and enjoyable. Our team of highly qualified and dedicated educators works
+                tirelessly to guide each student towards academic success and personal growth. We place equal emphasis on
+                co-curricular and extracurricular activities, ensuring that our students develop leadership qualities, creativity,
+                teamwork, and physical well-being. From sports and arts to public speaking and community service, we encourage
+                every child to explore their talents and discover their true potential.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                Our campuses are designed to provide a safe, secure, and inspiring environment, equipped with modern infrastructure
+                and student-friendly facilities. We also believe in maintaining a strong partnership with parents, as together we can
+                shape a brighter future for our children. I warmly invite you to visit our Marthanda Nagar campus, interact with our
+                faculty, and witness the quality education and values we proudly uphold.
+              </p>
+              <p className="mt-4 font-display text-lg text-[color:var(--navy)] italic">
+                "Give your child the right platform to learn, grow, and succeed. At Holy Fathima, we don't just educate minds — we shape futures."
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 px-4">
         <div className="mx-auto max-w-5xl">
           <SectionHeading eyebrow="Our Journey" title={<>Milestones along the <span className="text-gradient-gold">way</span></>} />
