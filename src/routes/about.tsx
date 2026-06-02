@@ -83,8 +83,7 @@ function AboutPage() {
               <div className="absolute -inset-3 gradient-gold rounded-3xl opacity-25 blur-xl" />
               <img src={chairman} alt="Chairman of Holy Fathima Group of Schools" className="relative rounded-3xl shadow-glow w-full h-[460px] object-cover object-top" />
               <div className="mt-4 text-center">
-                <div className="font-display text-2xl font-bold text-gradient-gold tracking-wide">SHAIK RAJJAB</div>
-                <div className="font-display text-base font-semibold text-[color:var(--navy)] mt-1">Chairman &amp; Founder</div>
+                <div className="font-display text-xl font-bold text-[color:var(--navy)]">Chairman &amp; Founder</div>
                 <div className="text-sm text-muted-foreground">Group of Holy Fathima High Schools</div>
                 <div className="text-xs text-muted-foreground mt-1">Principal — Marthanda Nagar Branch</div>
               </div>
