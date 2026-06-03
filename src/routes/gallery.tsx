@@ -5,13 +5,8 @@ import { PageHero } from "@/components/site/PageHero";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import campusData from "@/assets/marthanda-nagar.jpg.asset.json";
 const campus = campusData.url;
-import classroom1 from "@/assets/classroom-1.webp";
-import classroom2 from "@/assets/classroom-2.webp";
-import classroom3 from "@/assets/classroom-3.webp";
-import classroom4 from "@/assets/classroom-4.webp";
-import office from "@/assets/office.webp";
-import reception from "@/assets/reception.webp";
-import corridor from "@/assets/corridor.webp";
+import { SITE_MEDIA, SCHOOL_GALLERY_IMAGES } from "@/lib/site-media";
+
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -26,17 +21,12 @@ export const Route = createFileRoute("/gallery")({
   component: GalleryPage,
 });
 
-type Item = { src: string; cat: "Campus" | "Classrooms" | "Facilities"; label: string };
+type Item = { src: string; cat: "Campus" | "Classrooms" | "Events" | "Achievements"; label: string };
 const all: Item[] = [
   { src: campus, cat: "Campus", label: "Main Building" },
-  { src: reception, cat: "Campus", label: "Reception" },
-  { src: corridor, cat: "Campus", label: "Corridor" },
-  { src: office, cat: "Facilities", label: "Administrative Office" },
-  { src: classroom1, cat: "Classrooms", label: "Class in Session" },
-  { src: classroom2, cat: "Classrooms", label: "English Class" },
-  { src: classroom3, cat: "Classrooms", label: "Primary Class" },
-  { src: classroom4, cat: "Classrooms", label: "Junior Class" },
+  ...SCHOOL_GALLERY_IMAGES,
 ];
+
 
 function GalleryPage() {
   const [filter, setFilter] = useState<"All" | Item["cat"]>("All");
@@ -49,12 +39,12 @@ function GalleryPage() {
 
   return (
     <>
-      <PageHero eyebrow="Gallery" title={<>Moments from our <span className="text-gradient-gold">vibrant campus</span></>} description="A peek into the everyday life that makes Holy Fathima a special place to learn and grow." image={classroom3} />
+      <PageHero eyebrow="Gallery" title={<>Moments from our <span className="text-gradient-gold">vibrant campus</span></>} description="A peek into the everyday life that makes Holy Fathima a special place to learn and grow." image={SITE_MEDIA.readingCircle} />
 
       <section className="py-16 px-4">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-wrap justify-center gap-2">
-            {(["All", "Campus", "Classrooms", "Facilities"] as const).map((f) => (
+            {(["All", "Campus", "Classrooms", "Events", "Achievements"] as const).map((f) => (
               <button key={f} onClick={() => setFilter(f)}
                 className={`px-5 py-2 rounded-full text-sm font-semibold transition ${filter === f ? "gradient-royal text-white shadow-glow" : "bg-card border border-border hover:border-[color:var(--gold)]"}`}>
                 {f}

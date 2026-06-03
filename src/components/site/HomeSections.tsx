@@ -11,13 +11,8 @@ import { Counter } from "./Counter";
 import { SCHOOL } from "@/lib/school";
 import campusData from "@/assets/marthanda-nagar.jpg.asset.json";
 const campus = campusData.url;
-import classroom1 from "@/assets/classroom-1.webp";
-import classroom2 from "@/assets/classroom-2.webp";
-import classroom3 from "@/assets/classroom-3.webp";
-import classroom4 from "@/assets/classroom-4.webp";
-import office from "@/assets/office.webp";
-import reception from "@/assets/reception.webp";
-import corridor from "@/assets/corridor.webp";
+import { SITE_MEDIA } from "@/lib/site-media";
+
 
 export function AnnouncementTicker() {
   const items = [
@@ -51,10 +46,11 @@ export function AboutSection() {
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative">
           <div className="absolute -inset-4 gradient-gold rounded-3xl opacity-30 blur-2xl" />
           <div className="relative grid grid-cols-5 grid-rows-6 gap-3 h-[520px]">
-            <img src={campus} alt="Campus" className="col-span-3 row-span-4 rounded-3xl object-cover w-full h-full shadow-glow" />
-            <img src={classroom2} alt="" className="col-span-2 row-span-3 rounded-3xl object-cover w-full h-full" />
-            <img src={office} alt="" className="col-span-2 row-span-3 rounded-3xl object-cover w-full h-full" />
-            <img src={classroom1} alt="" className="col-span-3 row-span-2 rounded-3xl object-cover w-full h-full" />
+            <img src={campus} alt="School building" className="col-span-3 row-span-4 rounded-3xl object-cover w-full h-full shadow-glow" />
+            <img src={SITE_MEDIA.readingCircle} alt="Students learning together" className="col-span-2 row-span-3 rounded-3xl object-cover w-full h-full" />
+            <img src={SITE_MEDIA.activityLearning} alt="Activity-based classroom" className="col-span-2 row-span-3 rounded-3xl object-cover w-full h-full" />
+            <img src={SITE_MEDIA.montessoriShapes} alt="Montessori learning materials" className="col-span-3 row-span-2 rounded-3xl object-cover w-full h-full" />
+
           </div>
         </motion.div>
         <div>
@@ -233,15 +229,16 @@ export function WhyChooseSection() {
 
 export function GalleryPreview() {
   const images = [
-    { src: campus, label: "Campus" },
-    { src: classroom1, label: "Classroom" },
-    { src: classroom2, label: "Learning" },
-    { src: classroom3, label: "Students" },
-    { src: classroom4, label: "Teaching" },
-    { src: reception, label: "Reception" },
-    { src: office, label: "Administration" },
-    { src: corridor, label: "Corridors" },
+    { src: campus, label: "School Building" },
+    { src: SITE_MEDIA.montessoriShapes, label: "Montessori Shapes" },
+    { src: SITE_MEDIA.montessoriCircleTime, label: "Circle Time" },
+    { src: SITE_MEDIA.readingCircle, label: "Reading Session" },
+    { src: SITE_MEDIA.activityLearning, label: "Activity Learning" },
+    { src: SITE_MEDIA.writingPractice, label: "Writing Practice" },
+    { src: SITE_MEDIA.parentsDay, label: "Parents Day" },
+    { src: SITE_MEDIA.awardCeremony, label: "Award Ceremony" },
   ];
+
   return (
     <section className="py-20 sm:py-28 px-4">
       <div className="mx-auto max-w-7xl">
@@ -277,11 +274,12 @@ export function GalleryPreview() {
 }
 
 const testimonials = [
-  { name: "Mrs. Anjali Reddy", role: "Parent of Class 5", quote: "The teachers genuinely care about each child. My daughter has grown so confident since joining Holy Fathima.", img: classroom2 },
-  { name: "Mr. Imran Khan", role: "Parent of Class 9", quote: "Excellent academics combined with strong values. The campus is safe and the staff is always approachable.", img: classroom1 },
-  { name: "Sneha S.", role: "Alumna, Class 10", quote: "Holy Fathima shaped who I am today. The faculty pushed me to dream big and gave me the tools to get there.", img: classroom3 },
-  { name: "Mr. Ramesh Naidu", role: "Parent of UKG", quote: "Best decision we made. The play-based learning has my son excited to go to school every single day.", img: classroom4 },
+  { name: "Mrs. Anjali Reddy", role: "Parent of Class 5", quote: "The teachers genuinely care about each child. My daughter has grown so confident since joining Holy Fathima.", img: SITE_MEDIA.readingCircle },
+  { name: "Mr. Imran Khan", role: "Parent of Class 9", quote: "Excellent academics combined with strong values. The campus is safe and the staff is always approachable.", img: SITE_MEDIA.activityLearning },
+  { name: "Sneha S.", role: "Alumna, Class 10", quote: "Holy Fathima shaped who I am today. The faculty pushed me to dream big and gave me the tools to get there.", img: SITE_MEDIA.awardCeremony },
+  { name: "Mr. Ramesh Naidu", role: "Parent of UKG", quote: "Best decision we made. The play-based learning has my son excited to go to school every single day.", img: SITE_MEDIA.montessoriCircleTime },
 ];
+
 
 export function TestimonialsSection() {
   const [i, setI] = useState(0);
