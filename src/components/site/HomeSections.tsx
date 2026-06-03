@@ -345,10 +345,11 @@ export function AdmissionsCTA() {
 }
 
 const news = [
-  { date: "Mar 12", title: "Annual Day 2026 — A celebration of talent", desc: "Students dazzled the audience with performances across music, dance, and drama.", img: classroom3 },
-  { date: "Feb 24", title: "Inter-school science exhibition winners", desc: "Our Class 9 team brought home the gold in the regional science fair.", img: classroom2 },
-  { date: "Jan 15", title: "Parent-Teacher Workshop on digital safety", desc: "An interactive session on raising children in the digital era.", img: classroom1 },
+  { date: "Mar 12", title: "Annual Day 2026 — A celebration of talent", desc: "Students dazzled the audience with performances across music, dance, and drama.", img: SITE_MEDIA.parentsDay },
+  { date: "Feb 24", title: "Inter-school science exhibition winners", desc: "Our Class 9 team brought home the gold in the regional science fair.", img: SITE_MEDIA.awardCeremony },
+  { date: "Jan 15", title: "Parent-Teacher Workshop on digital safety", desc: "An interactive session on raising children in the digital era.", img: SITE_MEDIA.sportsParade },
 ];
+
 
 export function NewsSection() {
   return (

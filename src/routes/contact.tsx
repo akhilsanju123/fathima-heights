@@ -4,7 +4,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import reception from "@/assets/reception.webp";
+import { SITE_MEDIA } from "@/lib/site-media";
 import { SCHOOL, BRANCHES } from "@/lib/school";
 
 export const Route = createFileRoute("/contact")({
@@ -38,7 +38,7 @@ function ContactPage() {
   return (
     <>
       <Toaster richColors position="top-center" />
-      <PageHero eyebrow="Contact Us" title={<>We'd love to <span className="text-gradient-gold">hear from you</span></>} description="Questions about admissions, programs or a campus visit — our team is here to help." image={reception} />
+      <PageHero eyebrow="Contact Us" title={<>We'd love to <span className="text-gradient-gold">hear from you</span></>} description="Questions about admissions, programs or a campus visit — our team is here to help." image={SITE_MEDIA.parentsDay} />
 
       <section className="py-16 px-4">
         <div className="mx-auto max-w-7xl">
