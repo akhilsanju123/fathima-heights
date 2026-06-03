@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import { Check, FileText, Phone, Calendar, GraduationCap, ChevronDown } from "lucide-react";
-import classroom4 from "@/assets/classroom-4.webp";
+import { SITE_MEDIA } from "@/lib/site-media";
 import { SCHOOL } from "@/lib/school";
 
 export const Route = createFileRoute("/admissions")({
@@ -59,7 +59,7 @@ function AdmissionsPage() {
   return (
     <>
       <Toaster richColors position="top-center" />
-      <PageHero eyebrow="Admissions Open · 2026–27" title={<>Give your child the start they <span className="text-gradient-gold">deserve</span></>} description="Limited seats available across all classes. Apply now to secure admission for the upcoming academic year." image={classroom4} />
+      <PageHero eyebrow="Admissions Open · 2026–27" title={<>Give your child the start they <span className="text-gradient-gold">deserve</span></>} description="Limited seats available across all classes. Apply now to secure admission for the upcoming academic year." image={SITE_MEDIA.awardCeremony} />
 
       <section className="py-20 px-4">
         <div className="mx-auto max-w-7xl">

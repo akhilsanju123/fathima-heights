@@ -5,8 +5,8 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { Counter } from "@/components/site/Counter";
 import campusData from "@/assets/marthanda-nagar.jpg.asset.json";
 const campus = campusData.url;
-import classroom1 from "@/assets/classroom-1.webp";
-import office from "@/assets/office.webp";
+import { SITE_MEDIA } from "@/lib/site-media";
+
 import chairmanData from "@/assets/chairman.jpg.asset.json";
 const chairman = chairmanData.url;
 import { SCHOOL } from "@/lib/school";
@@ -32,7 +32,7 @@ function AboutPage() {
 
       <section className="py-20 px-4">
         <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center">
-          <motion.img initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} src={classroom1} alt="" className="rounded-3xl shadow-glow w-full h-[480px] object-cover" />
+          <motion.img initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} src={SITE_MEDIA.readingCircle} alt="Students learning together" className="rounded-3xl shadow-glow w-full h-[480px] object-cover" />
           <div>
             <SectionHeading align="left" eyebrow="Our Story" title={<>Built on a vision of <span className="text-gradient-gold">quality education</span></>} />
             <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -156,7 +156,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <img src={office} alt="" className="hidden" />
+      <img src={SITE_MEDIA.activityLearning} alt="" className="hidden" />
     </>
   );
 }

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Sparkles, HeartHandshake, Lightbulb, BookOpen, GraduationCap, Award, Check } from "lucide-react";
-import classroom2 from "@/assets/classroom-2.webp";
+import { SITE_MEDIA } from "@/lib/site-media";
 
 export const Route = createFileRoute("/academics")({
   head: () => ({
@@ -29,7 +29,7 @@ const programs = [
 function AcademicsPage() {
   return (
     <>
-      <PageHero eyebrow="Academics" title={<>A complete journey from <span className="text-gradient-gold">Nursery to Class 10</span></>} description="CBSE primary (Nursery – 5th), SSC high school (6th – 10th), with Abacus for 1st–5th and IIT Foundation for 5th–10th — designed to nurture curious minds and confident learners." image={classroom2} />
+      <PageHero eyebrow="Academics" title={<>A complete journey from <span className="text-gradient-gold">Nursery to Class 10</span></>} description="CBSE primary (Nursery – 5th), SSC high school (6th – 10th), with Abacus for 1st–5th and IIT Foundation for 5th–10th — designed to nurture curious minds and confident learners." image={SITE_MEDIA.montessoriShapes} />
 
       <section className="py-20 px-4">
         <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-6">

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { SCHOOL, BRANCHES } from "@/lib/school";
 import { MapPin, Phone } from "lucide-react";
-import reception from "@/assets/reception.webp";
+import { SITE_MEDIA } from "@/lib/site-media";
 
 export const Route = createFileRoute("/branches")({
   head: () => ({
@@ -23,7 +23,7 @@ function BranchesPage() {
         eyebrow="Our Branches"
         title={<>Find your nearest <span className="text-gradient-gold">campus</span></>}
         description={`${SCHOOL.shortName} Group of Schools — established ${SCHOOL.established}. Four campuses, one promise of quality English-medium education.`}
-        image={reception}
+        image={SITE_MEDIA.sportsParade}
       />
 
       <section className="py-20 px-4">
