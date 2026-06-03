@@ -3,9 +3,9 @@ import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import heroBannerData from "@/assets/hero-banner.png.asset.json";
-import classroom1 from "@/assets/classroom-1.webp";
-import classroom2 from "@/assets/classroom-2.webp";
 import logo from "@/assets/logo.webp";
+import { SITE_MEDIA } from "@/lib/site-media";
+
 
 const slides = [
   {
@@ -15,13 +15,13 @@ const slides = [
     subtitle: "Premium English-medium education from Nursery to Class 10 — CBSE primary and SSC high school in the heart of Hafeezpet, Hyderabad.",
   },
   {
-    image: classroom1,
+    image: SITE_MEDIA.readingCircle,
     eyebrow: "Where Learning Comes Alive",
     title: "Inspiring Minds,\nShaping Tomorrow",
     subtitle: "Experienced faculty, modern classrooms, and a curriculum that nurtures curiosity and confidence.",
   },
   {
-    image: classroom2,
+    image: SITE_MEDIA.activityLearning,
     eyebrow: "Holistic Development",
     title: "Knowledge is Power.\nCharacter is Everything.",
     subtitle: "Academics, sports, arts and values — a complete educational journey for every child.",
